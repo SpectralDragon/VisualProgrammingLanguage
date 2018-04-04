@@ -94,7 +94,7 @@ public class ValueChooserView<T>: DisplayableNodeContentView {
             alert.addAction(action)
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let cancelAction = UIAlertAction(title: "Cancel".localized, style: .cancel)
         alert.addAction(cancelAction)
         
         // Present it

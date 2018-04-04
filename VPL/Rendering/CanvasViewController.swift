@@ -174,6 +174,9 @@ public class CanvasViewController: UIViewController {
             alert.addAction(action)
         }
         
+        let cancelAction = UIAlertAction(title: "Cancel".localized, style: .cancel)
+        alert.addAction(cancelAction)
+        
         // Present it
         self.present(alert, animated: true)
     }

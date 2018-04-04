@@ -71,7 +71,7 @@ public class GenericInputViewField: UIView {
             textField.text = self.value
             textField.clearButtonMode = .whileEditing
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let cancelAction = UIAlertAction(title: "Cancel".localized, style: .cancel)
         let doneAction = UIAlertAction(
             title: "Done",
             style: .default,
