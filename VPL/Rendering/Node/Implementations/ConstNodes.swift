@@ -12,7 +12,7 @@ public class EvalConstNode: DisplayableNode {
     public static let shortcutCharacter: String? = "C"
     
     public static let id: String = "eval-const"
-    public static let name: String = "Eval Constant"
+    public static let name: String = "Eval Constant".localized
     public var output: NodeOutput = .value(OutputValue(type: .unknown))
     public var contentView: DisplayableNodeContentView? { return inputView }
     
@@ -34,7 +34,7 @@ public class IntConstNode: DisplayableNode {
     public static let shortcutCharacter: String? = "C"
     
     public static let id: String = "int-const"
-    public static let name: String = "Integer Constant"
+    public static let name: String = "Integer Constant".localized
     public let output: NodeOutput = .value(OutputValue(type: .int))
     public var contentView: DisplayableNodeContentView? { return inputView }
     
@@ -54,7 +54,7 @@ public class IntConstNode: DisplayableNode {
         } else if Int(rawValue) != nil {
             return "(\(rawValue) as Int)"
         } else {
-            return "FAILED TO CONVERT INT"
+            return "FAILED TO CONVERT INT".localized
         }
     }
 }
@@ -62,7 +62,7 @@ public class StringConstNode: DisplayableNode {
     public static let shortcutCharacter: String? = "C"
     
     public static let id: String = "str-const"
-    public static let name: String = "String Constant"
+    public static let name: String = "String Constant".localized
     public let output: NodeOutput = .value(OutputValue(type: .string))
     public var contentView: DisplayableNodeContentView? { return inputView }
     

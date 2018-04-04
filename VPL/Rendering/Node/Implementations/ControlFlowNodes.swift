@@ -11,10 +11,10 @@ public class IfNode: DisplayableNode {
     public static let shortcutCharacter: String? = "I"
     
     public static let id: String = "if"
-    public static let name: String = "If"
+    public static let name: String = "If".localized
     public let inputTrigger: InputTrigger? = InputTrigger()
-    public let inputValues: [InputValue] = [InputValue(id: "condition", name: "Condition", type: .bool)]
-    public let output: NodeOutput = .triggers([OutputTrigger(), OutputTrigger(id: "true", name: "True"), OutputTrigger(id: "false", name: "False")])
+    public let inputValues: [InputValue] = [InputValue(id: "condition", name: "Condition".localized, type: .bool)]
+    public let output: NodeOutput = .triggers([OutputTrigger(), OutputTrigger(id: "true", name: "True".localized), OutputTrigger(id: "false", name: "False".localized)])
     
     public required init() {
         self.setupConnections()
@@ -34,12 +34,12 @@ public class ForLoopNode: DisplayableNode {
     public static let shortcutCharacter: String? = "F"
     
     public static let id: String = "for"
-    public static let name: String = "For Loop"
+    public static let name: String = "For Loop".localized
     public let inputTrigger: InputTrigger? = InputTrigger()
-    public let inputValues: [InputValue] = [InputValue(id: "from", name: "From", type: .int), InputValue(id: "to", name: "To", type: .int)]
+    public let inputValues: [InputValue] = [InputValue(id: "from", name: "From".localized, type: .int), InputValue(id: "to", name: "To".localized, type: .int)]
     public let output: NodeOutput = .triggers([
         OutputTrigger(),
-        OutputTrigger(id: "loop", name: "Loop", exposedVariables: [NodeVariable(name: "Index", type: .int)])
+        OutputTrigger(id: "loop", name: "Loop".localized, exposedVariables: [NodeVariable(name: "Index", type: .int)])
     ])
     
     var indexVariable: NodeVariable {

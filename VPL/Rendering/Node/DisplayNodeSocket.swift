@@ -221,7 +221,7 @@ class DisplayNodeSocket: UIView {
         
         // Create the controller
         let alert = UIAlertController(
-            title: "Spawn Node",
+            title: "Spawn Node".localized,
             message: nil,
             preferredStyle: .actionSheet
         )

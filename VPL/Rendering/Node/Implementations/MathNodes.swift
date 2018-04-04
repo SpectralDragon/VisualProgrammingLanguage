@@ -29,7 +29,7 @@ public class MathNode: DisplayableNode {
 }
 public class AddNode: MathNode {
     public override class var id: String { return "add" }
-    public override class var name: String { return "Add" }
+    public override class var name: String { return "Add".localized }
     
     public override func assemble() -> String {
         return "(\(inputA.assemble()) + \(inputB.assemble()))"
@@ -37,7 +37,7 @@ public class AddNode: MathNode {
 }
 public class SubtractNode: MathNode {
     public override class var id: String { return "subtract" }
-    public override class var name: String { return "Subtract" }
+    public override class var name: String { return "Subtract".localized }
     
     public override func assemble() -> String {
         return "(\(inputA.assemble()) - \(inputB.assemble()))"
@@ -53,7 +53,7 @@ public class MultiplyNode: MathNode {
 }
 public class DivideNode: MathNode {
     public override class var id: String { return "divide" }
-    public override class var name: String { return "Divide" }
+    public override class var name: String { return "Divide".localized }
     
     public override func assemble() -> String {
         return "(\(inputA.assemble()) / \(inputB.assemble()))"
@@ -61,7 +61,7 @@ public class DivideNode: MathNode {
 }
 public class ModuloNode: MathNode {
     public override class var id: String { return "modulo" }
-    public override class var name: String { return "Modulo" }
+    public override class var name: String { return "Modulo".localized }
     
     public override func assemble() -> String {
         return "(\(inputA.assemble()) % \(inputB.assemble()))"
@@ -72,7 +72,7 @@ public class RandomIntNode: DisplayableNode {
     public static let shortcutCharacter: String? = "M"
     
     public static let id: String = "random-in"
-    public static let name: String = "Random Integer"
+    public static let name: String = "Random Integer".localized
     public let output: NodeOutput = .value(OutputValue(type: .int))
     
     public required init() {
@@ -88,7 +88,7 @@ public class RandomFloatNode: DisplayableNode {
     public static let shortcutCharacter: String? = "M"
     
     public static let id: String = "random-float"
-    public static let name: String = "Random Float"
+    public static let name: String = "Random Float".localized
     public let output: NodeOutput = .value(OutputValue(type: .float))
     
     public required init() {
@@ -104,7 +104,7 @@ public class EqualsNode: DisplayableNode {
     public static let shortcutCharacter: String? = "E"
     
     public static let id: String = "equals"
-    public static let name: String = "Equals"
+    public static let name: String = "Equals".localized
     public let inputValues: [InputValue] = [InputValue(id: "a", name: "A", type: .int), InputValue(id: "b", name: "B", type: .int)]
     public let output: NodeOutput = .value(OutputValue(type: .bool))
     

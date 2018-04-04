@@ -76,7 +76,7 @@ public final class OutputTrigger {
     }
     
     public convenience init(exposedVariables: [NodeVariable] = []) {
-        self.init(id: "next", name: "Next", exposedVariables: exposedVariables)
+        self.init(id: "next", name: "Next".localized, exposedVariables: exposedVariables)
     }
     
     /// Determines if two triggers can be connected.

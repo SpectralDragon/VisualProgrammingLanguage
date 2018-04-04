@@ -1,0 +1,99 @@
+
+// MARK: - Common
+
+"Cancel" = "Cancel";
+"Done" = "Done";
+"Copy" = "Copy";
+
+"From" = "From";
+"To" = "To";
+"Next" = "Next";
+"Previous" = "Previous";
+"Output" = "Output";
+"Key" = "Key";
+"Value" = "Value";
+"Key Type" = "Key Type";
+"Value Type" = "Value Type";
+
+// MARK: - Nodes
+
+// MARK: Alert Controller
+
+"Spawn Node" = "Spawn Node";
+"Manual Edit" = "Manual Edit";
+"alert_msg_parentheses" = "Node shortcuts are displayed in parentheses.";
+
+// MARK: Base
+
+"Start" = "Start";
+
+// MARK: If
+
+"If" = "If";
+"Condition" = "Condition";
+"True" = "True";
+"False" = "False";
+
+// MARK: Loop
+
+"For Loop" = "For Loop";
+"Loop" = "Loop";
+"Index" = "Index";
+
+// MARK: Variables
+
+"Get Variable" = "Get Variable";
+"Set Variable" = "Set Variable";
+"Declare Variable" = "Declare Variable";
+"Set Value" = "Set Value";
+"Init Value" = "Init Value";
+"Target" = "Target";
+"NO SELECTED VARIABLE" = "NO SELECTED VARIABLE";
+"NO VARIABLE" = "NO VARIABLE";
+
+// MARK: Consts
+
+"Integer Constant" = "Integer Constant";
+"FAILED TO CONVERT INT" = "FAILED TO CONVERT INT";
+
+"Eval Constant" = "Eval Constant";
+
+"String Constant" = "String Constant";
+
+// MARK: Math
+
+"Add" = "Add";
+"Subtract" = "Subtract";
+"Multiply" = "Multiply";
+"Divide" = "Divide";
+"Modulo" = "Modulo";
+"Random Integer" = "Random Integer";
+"Random Float" = "Random Float";
+"Equals" = "Equals";
+
+// MARK: Array
+
+"Create Array" = "Create Array";
+"Append to Array" = "Append to Array";
+"Set At Index" = "Set At Index";
+"Remove At Index" = "Remove At Index";
+"Value Count" = "Value Count";
+
+// MARK: Dictionary
+
+"Create Dictionary" = "Create Dictionary";
+
+"Set At Key" = "Set At Key";
+"Get At Key" = "Get At Key";
+"Contains Key" = "Contains Key";
+"Remove At Key" = "Remove At Key";
+
+// MARK: Misc
+
+"Print" = "Print";
+"Swap" = "Swap";
+
+// MARK: - Others
+
+"unknown" = "unknown";
+"no_assembly" = "No assembled code.";

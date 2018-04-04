@@ -150,8 +150,8 @@ public class CanvasViewController: UIViewController {
     func nodeListPopover(nodes: [DisplayableNode.Type], charBox: CGRect, showShortcuts: Bool) {
         // Create the controller
         let alert = UIAlertController(
-            title: "Spawn Node",
-            message: showShortcuts ? "Node shortcuts are displayed in parentheses." : nil,
+            title: "Spawn Node".localized,
+            message: showShortcuts ? "alert_msg_parentheses".localized : nil,
             preferredStyle: .actionSheet
         )
         

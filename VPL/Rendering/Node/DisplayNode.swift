@@ -89,7 +89,7 @@ public class DisplayNode: UIView, UIGestureRecognizerDelegate {
         
         // Add properties
         if let trigger = node.inputTrigger {
-            addProperty(parent: leftPanel, leftAlign: true, socket: .inputTrigger(trigger), name: "Previous", type: nil)
+            addProperty(parent: leftPanel, leftAlign: true, socket: .inputTrigger(trigger), name: "Previous".localized, type: nil)
         }
         for value in node.inputValues {
             addProperty(parent: leftPanel, leftAlign: true, socket: .inputValue(value), name: value.name, type: value.type.description)
@@ -103,7 +103,7 @@ public class DisplayNode: UIView, UIGestureRecognizerDelegate {
                 addProperty(parent: rightPanel, leftAlign: false, socket: .outputTrigger(trigger), name: trigger.name, type: nil)
             }
         case .value(let value):
-            addProperty(parent: rightPanel, leftAlign: false, socket: .outputValue(value), name: "Output", type: value.type.description)
+            addProperty(parent: rightPanel, leftAlign: false, socket: .outputValue(value), name: "Output".localized, type: value.type.description)
         case .none:
             break
         }
