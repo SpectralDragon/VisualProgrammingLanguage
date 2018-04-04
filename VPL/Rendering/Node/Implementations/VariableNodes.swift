@@ -12,11 +12,11 @@ public class DeclareVariableNode: DisplayableNode {
     public static let shortcutCharacter: String? = "S"
     
     public static let id: String = "declare variable"
-    public static let name: String = "Declare Variable"
+    public static let name: String = "Declare Variable".localized
     public let inputTrigger: InputTrigger? = InputTrigger()
-    public let inputValues: [InputValue] = [ InputValue(id: "init value", name: "Init Value", type: .unknown) ]
+    public let inputValues: [InputValue] = [ InputValue(id: "init value", name: "Init Value".localized, type: .unknown) ]
     public let output: NodeOutput = .triggers([
-        OutputTrigger(exposedVariables: [ NodeVariable(name: "Variable", type: .unknown) ])
+        OutputTrigger(exposedVariables: [ NodeVariable(name: "Variable".localized, type: .unknown) ])
     ])
     
     var variable: NodeVariable {
@@ -41,10 +41,10 @@ public class SetVariableNode: DisplayableNode {
     public static let shortcutCharacter: String? = "S"
     
     public static let id: String = "set variable"
-    public static let name: String = "Set Variable"
+    public static let name: String = "Set Variable".localized
     public let inputTrigger: InputTrigger? = InputTrigger()
-    public let inputValues: [InputValue] = [ InputValue(id: "set value", name: "Set Value", type: .unknown) ]
-    public let inputVariables: [InputVariable] = [ InputVariable(id: "target", name: "Target", type: .unknown) ]
+    public let inputValues: [InputValue] = [ InputValue(id: "set value", name: "Set Value".localized, type: .unknown) ]
+    public let inputVariables: [InputVariable] = [ InputVariable(id: "target", name: "Target".localized, type: .unknown) ]
     public let output: NodeOutput = .triggers([OutputTrigger()])
     
     public required init() {
@@ -53,7 +53,7 @@ public class SetVariableNode: DisplayableNode {
     
     public func assemble() -> String {
         let assembledInput = inputValues[0].assemble()
-        let out = "\(inputVariables[0].target?.id ?? "NO SELECTED VARIABLE") = \(assembledInput)\n"
+        let out = "\(inputVariables[0].target?.id ?? "NO SELECTED VARIABLE".localized) = \(assembledInput)\n"
         return out + assembleOutputTrigger()
     }
 }
@@ -61,8 +61,8 @@ public class GetVariableNode: DisplayableNode {
     public static let shortcutCharacter: String? = "V"
     
     public static let id: String = "get variable"
-    public static let name: String = "Get Variable"
-    public let inputVariables: [InputVariable] = [ InputVariable(id: "target", name: "Target", type: .unknown) ]
+    public static let name: String = "Get Variable".localized
+    public let inputVariables: [InputVariable] = [ InputVariable(id: "target", name: "Target".localized, type: .unknown) ]
     public let output: NodeOutput = .value(OutputValue(type: .unknown))
     
     public required init() {
@@ -70,6 +70,6 @@ public class GetVariableNode: DisplayableNode {
     }
     
     public func assemble() -> String {
-        return "(\(inputVariables[0].target?.id ?? "NO SELECTED VARIABLE"))"
+        return "(\(inputVariables[0].target?.id ?? "NO SELECTED VARIABLE".localized))"
     }
 }

@@ -182,7 +182,7 @@ public class DrawCanvasNodeView: DisplayableNodeContentView, UITextFieldDelegate
     
     @objc func manualEdit(sender: UIButton) {
         // Get the name
-        var name: String = "Manual Edit"
+        var name: String = "Manual Edit".localized
         if let node = node {
             name = type(of: node).name
         }
@@ -195,9 +195,9 @@ public class DrawCanvasNodeView: DisplayableNodeContentView, UITextFieldDelegate
             textField.delegate = self // Filter digits for digit pad
             textField.keyboardType = self.inputType == .digits ? .decimalPad : .default
         }
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Cancel".localized, style: .cancel))
         alert.addAction(UIAlertAction(
-            title: "Done",
+            title: "Done".localized,
             style: .default,
             handler: { _ in
                 let textField = alert.textFields![0]

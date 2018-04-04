@@ -1,0 +1,99 @@
+
+// MARK: - Common
+
+"Cancel" = "Отмена";
+"Done" = "Готово";
+"Copy" = "Копировать";
+
+"From" = "От";
+"To" = "До";
+"Next" = "Далее";
+"Previous" = "Предыдущий";
+"Output" = "Выход";
+"Key" = "Ключ";
+"Value" = "Значение";
+"Key Type" = "Тип Ключа";
+"Value Type" = "Тип Значения";
+
+// MARK: - Nodes
+
+// MARK: Alert Controller
+
+"Spawn Node" = "Создать узел";
+"Manual Edit" = "Ручное редактирование";
+"alert_msg_parentheses" = "Узлы должны быть объявленны в круглых скобках";
+
+// MARK: Base
+
+"Start" = "Начало";
+
+// MARK: If
+
+"If" = "Если";
+"Condition" = "Условие";
+"True" = "Истино";
+"False" = "Ложь";
+
+// MARK: Loop
+
+"For Loop" = "Цикл For";
+"Loop" = "Цикл";
+"Index" = "Индекс";
+
+// MARK: Variables
+
+"Get Variable" = "Получить Переменную";
+"Set Variable" = "Установить Переменную";
+"Declare Variable" = "Объявить Переменную";
+"Set Value" = "Установить Значение";
+"Init Value" = "Инициализировать Значение";
+"Target" = "Цель";
+"NO SELECTED VARIABLE" = "НЕТ ВЫБРАННЫХ ПЕРЕМЕННЫХ";
+"NO VARIABLE" = "НЕ ПЕРЕМЕННОЙ";
+
+// MARK: Consts
+
+"Integer Constant" = "Целочисленная Константа";
+"FAILED TO CONVERT INT" = "Ошибка конвертирования в Int";
+
+"Eval Constant" = "Eval Constant";
+
+"String Constant" = "Строковая Константа";
+
+// MARK: Math
+
+"Add" = "Сложить";
+"Subtract" = "Вычесть";
+"Multiply" = "Умножить";
+"Divide" = "Разделить";
+"Modulo" = "По модулю";
+"Random Integer" = "Случайное Целочисленное Значение";
+"Random Float" = "Случайное Дробное Значение";
+"Equals" = "Сравнить";
+
+// MARK: Array
+
+"Create Array" = "Создать Массив";
+"Append to Array" = "Добавить в Массив";
+"Set At Index" = "Установить по Индексу";
+"Remove At Index" = "Удалить по Индексу";
+"Value Count" = "Кол-во Элементов";
+
+// MARK: Dictionary
+
+"Create Dictionary" = "Создать Словарь";
+
+"Set At Key" = "Установить по Ключу";
+"Get At Key" = "Получить по Ключу";
+"Contains Key" = "Содержит Ключ";
+"Remove At Key" = "Удалить по Ключу";
+
+// MARK: Misc
+
+"Print" = "Print";
+"Swap" = "Поменять местами";
+
+// MARK: - Others
+
+"unknown" = "неизвестно";
+"no_assembly" = "Нет собранного кода.";

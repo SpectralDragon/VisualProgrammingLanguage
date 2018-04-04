@@ -221,7 +221,7 @@ class DisplayNodeSocket: UIView {
         
         // Create the controller
         let alert = UIAlertController(
-            title: "Spawn Node",
+            title: "Spawn Node".localized,
             message: nil,
             preferredStyle: .actionSheet
         )
@@ -257,6 +257,9 @@ class DisplayNodeSocket: UIView {
             }
             alert.addAction(action)
         }
+        
+        let cancelAction = UIAlertAction(title: "Cancel".localized, style: .cancel)
+        alert.addAction(cancelAction)
         
         // Present it
         parentViewController?.present(alert, animated: true)

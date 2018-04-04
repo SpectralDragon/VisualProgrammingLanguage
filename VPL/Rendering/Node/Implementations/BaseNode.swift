@@ -12,7 +12,7 @@ class BaseNode: DisplayableNode {
     static let destroyable: Bool = false
     
     static let id: String = "start"
-    static let name: String = "Start"
+    static let name: String = "Start".localized
     var output: NodeOutput = .triggers([OutputTrigger()])
     
     required init() {

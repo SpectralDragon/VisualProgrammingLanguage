@@ -11,7 +11,7 @@ public class DictionaryCreateNode: DisplayableNode {
     public static let shortcutCharacter: String? = "D"
     
     public static let id: String = "dict-create"
-    public static let name: String = "Create Dictionary"
+    public static let name: String = "Create Dictionary".localized
     public let output: NodeOutput = .value(OutputValue(type: .dictionary(.unknown, .unknown)))
     public var contentView: DisplayableNodeContentView? { return input }
     
@@ -19,8 +19,8 @@ public class DictionaryCreateNode: DisplayableNode {
     
     public required init() {
         input = GenericInputView(node: self, fields: [
-            GenericInputViewField(name: "Key Type", defaultValue: "String"),
-            GenericInputViewField(name: "Value Type", defaultValue: "Int")
+            GenericInputViewField(name: "Key Type".localized, defaultValue: "String"),
+            GenericInputViewField(name: "Value Type".localized, defaultValue: "Int")
         ])
         
         self.setupConnections()
@@ -34,12 +34,12 @@ public class DictionarySetAtNode: DisplayableNode {
     public static let shortcutCharacter: String? = "D"
     
     public static let id: String = "dict-set-at"
-    public static let name: String = "Set At Key"
+    public static let name: String = "Set At Key".localized
     public let inputTrigger: InputTrigger? = InputTrigger()
     public let inputValues: [InputValue] = [
         InputValue(id: "dict", name: "Dictionary", type: .dictionary(.unknown, .unknown)),
-        InputValue(id: "key", name: "Key", type: .unknown),
-        InputValue(id: "value", name: "Value", type: .unknown)
+        InputValue(id: "key", name: "Key".localized, type: .unknown),
+        InputValue(id: "value", name: "Value".localized, type: .unknown)
     ]
     public let output: NodeOutput = .triggers([OutputTrigger()])
     
@@ -57,10 +57,10 @@ public class DictionaryGetAtNode: DisplayableNode {
     public static let shortcutCharacter: String? = "D"
     
     public static let id: String = "dict-get-at"
-    public static let name: String = "Get At Key"
+    public static let name: String = "Get At Key".localized
     public let inputValues: [InputValue] = [
         InputValue(id: "dict", name: "Dictionary", type: .dictionary(.unknown, .unknown)),
-        InputValue(id: "key", name: "Key", type: .unknown)
+        InputValue(id: "key", name: "Key".localized, type: .unknown)
     ]
     public let output: NodeOutput = .value(OutputValue(type: .unknown))
     
@@ -76,10 +76,10 @@ public class DictionaryContainsKeyNode: DisplayableNode {
     public static let shortcutCharacter: String? = "D"
     
     public static let id: String = "dict-get-at"
-    public static let name: String = "Contains Key"
+    public static let name: String = "Contains Key".localized
     public let inputValues: [InputValue] = [
         InputValue(id: "dict", name: "Dictionary", type: .dictionary(.unknown, .unknown)),
-        InputValue(id: "key", name: "Key", type: .unknown)
+        InputValue(id: "key", name: "Key".localized, type: .unknown)
     ]
     public let output: NodeOutput = .value(OutputValue(type: .bool))
     
@@ -95,11 +95,11 @@ public class DictionaryRemoveAtNode: DisplayableNode {
     public static let shortcutCharacter: String? = "D"
     
     public static let id: String = "dict-remove-at"
-    public static let name: String = "Remove At Key"
+    public static let name: String = "Remove At Key".localized
     public let inputTrigger: InputTrigger? = InputTrigger()
     public let inputValues: [InputValue] = [
         InputValue(id: "dict", name: "Dictionary", type: .dictionary(.unknown, .unknown)),
-        InputValue(id: "key", name: "Key", type: .int)
+        InputValue(id: "key", name: "Key".localized, type: .int)
     ]
     public let output: NodeOutput = .triggers([OutputTrigger()])
     

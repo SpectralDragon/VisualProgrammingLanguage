@@ -80,6 +80,10 @@ public extension String {
             self.append(indentString + line + "\n")
         }
     }
+    
+    var localized: String {
+        return NSLocalizedString(self, comment: "")
+    }
 }
 
 infix operator !+=

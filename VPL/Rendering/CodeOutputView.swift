@@ -54,7 +54,8 @@ class CodeOutputView: UIView {
         textView.widthAnchor.constraint(greaterThanOrEqualToConstant: 600).activate().setPriority(.defaultLow)
         
         // Add copy button
-        copyButton.setTitle("Copy", for: .normal)
+        copyButton.setTitle("Copy".localized, for: .normal)
+        copyButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         copyButton.setTitleColor(UIColor(white: 0.2, alpha: 1.0), for: .normal)
         copyButton.addTarget(self, action: #selector(copyCode(sender:)), for: .touchUpInside)
         addSubview(copyButton)
@@ -73,7 +74,7 @@ class CodeOutputView: UIView {
     func render(code: String) {
         // Get the code
         self.code = code
-        let code = code.count > 0 ? code : "No assembled code."
+        let code = code.count > 0 ? code : "no_assembly".localized
         
         // Show/hide button
         copyButton.isHidden = code.count == 0

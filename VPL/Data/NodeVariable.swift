@@ -72,6 +72,6 @@ public final class InputVariable {
     
     /// Assembles the code.
     public func assemble() -> String {
-        return target?.id ?? "NO VARIABLE"
+        return target?.id ?? "NO VARIABLE".localized
     }
 }

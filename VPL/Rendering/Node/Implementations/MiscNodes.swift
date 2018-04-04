@@ -13,7 +13,7 @@ public class PrintNode: DisplayableNode {
     public static let id: String = "print"
     public static let name: String = "Print"
     public let inputTrigger: InputTrigger? = InputTrigger()
-    public let inputValues: [InputValue] = [InputValue(id: "value", name: "Value", type: .unknown)]
+    public let inputValues: [InputValue] = [InputValue(id: "value", name: "Value".localized, type: .unknown)]
     public let output: NodeOutput = .triggers([OutputTrigger()])
     
     public required init() {
@@ -28,7 +28,7 @@ public class PrintNode: DisplayableNode {
 }
 public class SwapNode: DisplayableNode {
     public static let id: String = "swap"
-    public static let name: String = "Swap"
+    public static let name: String = "Swap".localized
     public let inputTrigger: InputTrigger? = InputTrigger()
     public let inputVariables: [InputVariable] = [InputVariable(id: "a", name: "A", type: .unknown), InputVariable(id: "b", name: "B", type: .unknown)]
     public let output: NodeOutput = .triggers([OutputTrigger()])
@@ -40,9 +40,9 @@ public class SwapNode: DisplayableNode {
     public func assemble() -> String {
         let tmpVariableId = NodeVariable.variableId
         var out = ""
-        out !+= "let \(tmpVariableId) = \(inputVariables[0].target?.id ?? "NO VARIABLE SELECTED")"
-        out !+= "\(inputVariables[0].target?.id ?? "NO VARIABLE SELECTED") = \(inputVariables[1].target?.id ?? "NO VARIABLE SELECTED")"
-        out !+= "\(inputVariables[1].target?.id ?? "NO VARIABLE SELECTED") = \(tmpVariableId)"
+        out !+= "let \(tmpVariableId) = \(inputVariables[0].target?.id ?? "NO VARIABLE SELECTED".localized)"
+        out !+= "\(inputVariables[0].target?.id ?? "NO VARIABLE SELECTED".localized) = \(inputVariables[1].target?.id ?? "NO VARIABLE SELECTED".localized)"
+        out !+= "\(inputVariables[1].target?.id ?? "NO VARIABLE SELECTED".localized) = \(tmpVariableId)"
         return out + assembleOutputTrigger()
     }
 }

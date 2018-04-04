@@ -11,7 +11,7 @@ public class ArrayCreateNode: DisplayableNode {
     public static let shortcutCharacter: String? = "A"
     
     public static let id: String = "array-create"
-    public static let name: String = "Create Array"
+    public static let name: String = "Create Array".localized
     public let output: NodeOutput = .value(OutputValue(type: .array(.unknown)))
     public var contentView: DisplayableNodeContentView? { return input }
     
@@ -19,7 +19,7 @@ public class ArrayCreateNode: DisplayableNode {
     
     public required init() {
         input = GenericInputView(node: self, fields: [
-            GenericInputViewField(name: "Value Type", defaultValue: "Int")
+            GenericInputViewField(name: "Value Type".localized, defaultValue: "Int")
         ])
         
         self.setupConnections()
@@ -33,7 +33,7 @@ public class ArrayAppendNode: DisplayableNode {
     public static let shortcutCharacter: String? = "A"
     
     public static let id: String = "array-appent"
-    public static let name: String = "Append to Array"
+    public static let name: String = "Append to Array".localized
     public let inputTrigger: InputTrigger? = InputTrigger()
     public let inputValues: [InputValue] = [
         InputValue(id: "array", name: "Array", type: .array(.unknown)),
@@ -55,7 +55,7 @@ public class ArraySetAtNode: DisplayableNode {
     public static let shortcutCharacter: String? = "A"
     
     public static let id: String = "array-set-at"
-    public static let name: String = "Set At Index"
+    public static let name: String = "Set At Index".localized
     public let inputTrigger: InputTrigger? = InputTrigger()
     public let inputValues: [InputValue] = [
         InputValue(id: "array", name: "Array", type: .array(.unknown)),
@@ -78,7 +78,7 @@ public class ArrayGetAtNode: DisplayableNode {
     public static let shortcutCharacter: String? = "A"
     
     public static let id: String = "array-get-at"
-    public static let name: String = "Get At Index"
+    public static let name: String = "Get At Index".localized
     public let inputValues: [InputValue] = [
         InputValue(id: "array", name: "Array", type: .array(.unknown)),
         InputValue(id: "index", name: "Index", type: .int)
@@ -97,7 +97,7 @@ public class ArrayRemoveAtNode: DisplayableNode {
     public static let shortcutCharacter: String? = "A"
     
     public static let id: String = "array-remove-at"
-    public static let name: String = "Remove At Index"
+    public static let name: String = "Remove At Index".localized
     public let inputTrigger: InputTrigger? = InputTrigger()
     public let inputValues: [InputValue] = [
         InputValue(id: "array", name: "Array", type: .array(.unknown)),
@@ -119,7 +119,7 @@ public class ArrayCountNode: DisplayableNode {
     public static let shortcutCharacter: String? = "A"
     
     public static let id: String = "array-count"
-    public static let name: String = "Value Count"
+    public static let name: String = "Value Count".localized
     public let inputValues: [InputValue] = [InputValue(id: "array", name: "Array", type: .array(.unknown))]
     public let output: NodeOutput = .value(OutputValue(type: .int))
     

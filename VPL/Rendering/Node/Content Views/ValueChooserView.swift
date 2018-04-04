@@ -66,7 +66,7 @@ public class ValueChooserView<T>: DisplayableNodeContentView {
     @objc func pickTouched(sender: UIButton) {
         // Create the controller
         let alert = UIAlertController(
-            title: "Spawn Node",
+            title: "Spawn Node".localized,
             message: nil,
             preferredStyle: .actionSheet
         )
@@ -94,7 +94,7 @@ public class ValueChooserView<T>: DisplayableNodeContentView {
             alert.addAction(action)
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let cancelAction = UIAlertAction(title: "Cancel".localized, style: .cancel)
         alert.addAction(cancelAction)
         
         // Present it
