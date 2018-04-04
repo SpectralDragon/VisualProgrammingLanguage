@@ -94,6 +94,9 @@ public class ValueChooserView<T>: DisplayableNodeContentView {
             alert.addAction(action)
         }
         
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(cancelAction)
+        
         // Present it
         parentViewController?.present(alert, animated: true)
     }
