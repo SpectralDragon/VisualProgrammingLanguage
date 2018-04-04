@@ -76,6 +76,7 @@
 "Create Array" = "Create Array";
 "Append to Array" = "Append to Array";
 "Set At Index" = "Set At Index";
+"Get At Index" = "Get At Index";
 "Remove At Index" = "Remove At Index";
 "Value Count" = "Value Count";
 

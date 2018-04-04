@@ -76,6 +76,7 @@
 "Create Array" = "Создать Массив";
 "Append to Array" = "Добавить в Массив";
 "Set At Index" = "Установить по Индексу";
+"Get At Index" = "Получить по Индексу";
 "Remove At Index" = "Удалить по Индексу";
 "Value Count" = "Кол-во Элементов";
 
