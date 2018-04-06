@@ -178,6 +178,7 @@ public class DisplayNode: UIView, UIGestureRecognizerDelegate {
             alignedViews[i].leftAnchor.constraint(equalTo: alignedViews[i-1].rightAnchor, constant: 8).activate()
         }
 
+        socket.typeLabel = typeLabel
         parent.addArrangedSubview(view)
     }
     

@@ -18,8 +18,10 @@ public final class InputValue {
     /// Name for this value.
     public let name: String
     
+    public let defaultType: ValueType
+    
     /// The type of value this holds.
-    public let type: ValueType
+    public var type: ValueType
     
     /// The connected value.
     public private(set) var target: OutputValue?
@@ -28,6 +30,7 @@ public final class InputValue {
         self.id = id
         self.name = name
         self.type = type
+        self.defaultType = type
     }
     
     /// Determines if two values can be connected.
@@ -40,6 +43,13 @@ public final class InputValue {
         // Set the new target
         target = newTarget
         
+        switch newTarget.type {
+        case .unknown:
+            break
+        default:
+            type = newTarget.type
+        }
+        
         // Connect the other node
         if newTarget.target !== self {
             newTarget.connect(to: self)
@@ -51,6 +61,8 @@ public final class InputValue {
         // Remove the target
         let tmpTarget = target
         target = nil
+        
+        type = defaultType
         
         // Remove other target if needed
         if tmpTarget?.target != nil {
@@ -69,7 +81,7 @@ public final class OutputValue {
     public internal(set) weak var owner: Node!
     
     /// The type of value this holds.
-    public let type: ValueType
+    public private(set) var type: ValueType
     
     /// The connected value.
     public private(set) var target: InputValue?

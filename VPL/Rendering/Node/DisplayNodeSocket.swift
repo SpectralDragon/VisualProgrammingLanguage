@@ -98,6 +98,8 @@ class DisplayNodeSocket: UIView {
     
     var variablesText: UILabel?
     
+    weak var typeLabel: UILabel?
+    
     var triangleShape: CAShapeLayer!
     
     init(frame: CGRect, type: DisplayNodeSocketType, node: DisplayNode) {
@@ -268,6 +270,9 @@ class DisplayNodeSocket: UIView {
     /// Label that will be drawn on the connection.
     func connectionLabel() -> String? {
         switch type {
+        case .inputValue(let value):
+            updateTypeLabel(from: value.type)
+            return nil
         case .inputVariable(let variable):
             if let target = variable.target {
                 return "\(target.name) (\(target.type.description))"
@@ -327,6 +332,11 @@ class DisplayNodeSocket: UIView {
         
         // Hide/show triangle
         triangleShape.isHidden = isConnected
+    }
+    
+    func updateTypeLabel(from type: ValueType) {
+        self.typeLabel?.text = type.description
+        self.node?.setNeedsLayout()
     }
     
     func addTriangle(size: CGSize) -> CAShapeLayer {
